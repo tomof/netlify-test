@@ -1,3 +1,4 @@
 dist/*
 !index.html
 !_redirects
+!_headers
