@@ -1,4 +1,1 @@
-dist/*
-!index.html
-!_redirects
-!_headers
+dist/style.css
