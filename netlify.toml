@@ -14,7 +14,7 @@
   publish = "dist/"
   command = "npm run build"
   environment = { ACCESS_TOKEN = "super secret", NODE_VERSION = "8.11.3" }
-[context.development]
+[context.develop]
   publish = "dist/"
   command = "npm run build"
   environment = { ACCESS_TOKEN = "super secret by development", NODE_VERSION = "8.11.2" }
