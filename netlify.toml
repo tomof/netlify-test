@@ -1,20 +1,8 @@
 [build]
-  # This is the directory to change to before starting a build.
-  # base    = "project/"
-  # NOTE: This is where we will look for package.json/.nvmrc/etc, not root.
-  # This is the directory that you are publishing from (relative to root of your repo)
-  # publish = "project/build-output/"
-  # This will be your default build command
-  # command = "echo 'default context'"
-  # This is where we will look for your lambda functions
-  # functions = "project/functions/"
-
-# Production context: All deploys from the Production branch set in your site's deploy settings will inherit these settings.
+  publish = "dist"
+  command = "npm run build"
+  NODE_VERSION = "8.11.3"
 [context.production]
-  publish = "dist/"
-  command = "npm run build"
-  environment = { ACCESS_TOKEN = "super secret", NODE_VERSION = "8.11.3" }
+  environment = { ACCESS_TOKEN = "******123"}
 [context.develop]
-  publish = "dist/"
-  command = "npm run build"
-  environment = { ACCESS_TOKEN = "super secret by development", NODE_VERSION = "8.11.2" }
+  environment = { ACCESS_TOKEN = "******456"}
