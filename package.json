@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node ./build.js && node-sass ./src/style.scss ./dist/style.css && cp -f ./src/index.html ./dist/index.html"
+    "log": "node ./log.js",
+    "build": "npm run log && npm run build:sass && npm run copy",
+    "build:sass": "node-sass ./src/style.scss ./dist/style.css",
+    "copy": "cpx \"./src/*.html\" \"./dist\""
   },
   "repository": {
     "type": "git",
@@ -19,6 +22,7 @@
   },
   "homepage": "https://github.com/tomof/netlify-test#readme",
   "devDependencies": {
+    "cpx": "^1.5.0",
     "node-sass": "^4.9.1"
   },
   "dependencies": {}
