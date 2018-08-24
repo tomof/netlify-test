@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "log": "node ./log.js",
     "build": "npm run log && npm run build:sass && npm run copy",
-    "build:sass": "node-sass ./src/style.scss ./dist/style.css",
+    "build:sass": "node build-sass.js",
     "copy": "cpx \"./src/*.html\" \"./dist\""
   },
   "repository": {
