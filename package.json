@@ -9,7 +9,7 @@
     "build": "npm run log && npm run build:sass && npm run copy",
     "build:sass": "node build-sass.js",
     "copy": "npm run copy:static && npm run copy:headers",
-    "copy:static": "cpx \"./src/*.html\" \"./dist\"",
+    "copy:static": "cpx \"./src/**/*.html\" \"./dist\"",
     "copy:headers": "cpx \"./src/_headers\" \"./dist\""
   },
   "repository": {
