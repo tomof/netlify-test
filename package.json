@@ -7,10 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "log": "node ./log.js",
     "build": "npm run log && npm run build:sass && npm run copy",
+    "build-development": "npm run build && npm run headers",
     "build:sass": "node build-sass.js",
-    "copy": "npm run copy:static && npm run copy:headers",
-    "copy:static": "cpx \"./src/**/*.html\" \"./dist\"",
-    "copy:headers": "cpx \"./src/_headers\" \"./dist\""
+    "copy": "cpx \"./src/*.html\" \"./dist\"",
+    "headers": "cpx \"./src/_headers\" \"./dist\""
   },
   "repository": {
     "type": "git",
