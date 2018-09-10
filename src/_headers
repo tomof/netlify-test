@@ -1,2 +1,2 @@
-/secret/*
-  Basic-Auth: someuser:somepassword
+/*
+  Basic-Auth: member:memberpassword

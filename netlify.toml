@@ -1,7 +1,9 @@
 # netlify.toml
 [build]
   publish = "dist"
-  command = "npm run build"
   environment = { NODE_VERSION = "8.11.3" }
 [context.branch-deploy]
+  command = "npm run build-development"
   environment = { NODE_ENV = "development" }
+[context.production]
+  command = "npm run build"
