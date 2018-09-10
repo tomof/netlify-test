@@ -1,8 +1,7 @@
+# netlify.toml
 [build]
   publish = "dist"
   command = "npm run build"
-#  environment = {  NODE_VERSION = "8.11.3" }
-#[context.production]
-#  environment = { ACCESS_TOKEN = "******123", NODE_ENV = "production" }
-#[context.branch-deploy]
-#  environment = { ACCESS_TOKEN = "******789", NODE_ENV = "development" }
+  environment = { NODE_VERSION = "8.11.3" }
+[context.branch-deploy]
+  environment = { NODE_ENV = "development" }

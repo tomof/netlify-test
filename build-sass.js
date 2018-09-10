@@ -1,7 +1,7 @@
 const fs = require('fs');
 const sass = require('node-sass');
-const includePath = process.env.NODE_ENV == 'production'
-  ? 'src/sass/production' : 'src/sass/development';
+const includePath = process.env.NODE_ENV == 'development'
+  ? 'src/sass/development' : 'src/sass/production';
 const writeCss = (err, result) => {
   if(err) {
     console.log(err);
